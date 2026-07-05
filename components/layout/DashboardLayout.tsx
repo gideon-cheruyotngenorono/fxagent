@@ -4,6 +4,7 @@ import Sidebar from './Sidebar';
 import TopBar from './TopBar';
 import MobileNav from './MobileNav';
 import CommandPalette from '@/components/search/CommandPalette';
+import AIChatPanel from '@/components/chat/AIChatPanel';
 
 export default function DashboardLayout({ children }: { children: ReactNode }) {
   return (
@@ -19,6 +20,7 @@ export default function DashboardLayout({ children }: { children: ReactNode }) {
       </div>
       <MobileNav />
       <CommandPalette />
+      <AIChatPanel />
     </div>
   );
 }
