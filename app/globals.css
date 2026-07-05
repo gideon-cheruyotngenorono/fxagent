@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* TradingView Dark Theme from Prompt */
+    --bg-primary: 13 17 23;      /* #0D1117 */
+    --bg-secondary: 22 27 34;    /* #161B22 */
+    --bg-tertiary: 33 38 45;     /* #21262D */
+    --border: 48 54 61;          /* #30363D */
+    --text-primary: 230 237 243; /* #E6EDF3 */
+    --text-secondary: 139 148 158;/* #8B949E */
+    
+    --trading-green: 0 200 83;   /* #00C853 */
+    --trading-red: 255 23 68;    /* #FF1744 */
+    --trading-blue: 33 150 243;  /* #2196F3 */
+    --trading-purple: 124 77 255;/* #7C4DFF */
+    --trading-yellow: 255 214 0; /* #FFD600 */
+    --trading-orange: 255 152 0; /* #FF9800 */
+
+    /* Shadcn defaults mapped to our dark theme */
+    --background: var(--bg-primary);
+    --foreground: var(--text-primary);
+    --card: var(--bg-secondary);
+    --card-foreground: var(--text-primary);
+    --popover: var(--bg-tertiary);
+    --popover-foreground: var(--text-primary);
+    --primary: var(--trading-purple);
+    --primary-foreground: 255 255 255;
+    --secondary: var(--bg-tertiary);
+    --secondary-foreground: var(--text-primary);
+    --muted: var(--bg-tertiary);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--bg-tertiary);
+    --accent-foreground: var(--text-primary);
+    --destructive: var(--trading-red);
+    --destructive-foreground: 255 255 255;
+    --border-color: var(--border); /* standard shadcn variable is --border normally but we have it as --border */
+    --input: var(--border);
+    --ring: var(--trading-purple);
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(48, 54, 61, 0.5); /* border color with opacity */
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 148, 158, 0.5);
+}
